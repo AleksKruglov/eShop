@@ -1,0 +1,24 @@
+.goods-list {
+    display: flex;
+}
+
+.goods-item {
+    border: 2px solid #000000;
+    border-radius: 5px;
+    width: 130px;
+    height: 130px;
+    text-align: center;
+    margin: 0 10px;
+    box-shadow: 0 0 5px grey;
+}
+
+.cart-button {
+    margin-bottom: 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    background: #4676d7;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+}
