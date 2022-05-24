@@ -1,20 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .goods-list {
     display: flex;
+    justify-content: center;
 }
 
 .goods-item {
-    border: 2px solid #000000;
     border-radius: 5px;
-    width: 130px;
-    height: 130px;
+    width: 200px;
+    height: 250px;
     text-align: center;
     margin: 0 10px;
     box-shadow: 0 0 5px grey;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: #e1e9f0;
+    margin-bottom: 30px;
+    box-shadow: 0 0 5px grey;
+}
+
+h1 {
+    color: #4676d7;
+}
+
 .cart-button {
-    margin-bottom: 20px;
-    margin-left: 10px;
+    margin-bottom: 30px;
     border-radius: 5px;
     background: #4676d7;
     color: #fff;
