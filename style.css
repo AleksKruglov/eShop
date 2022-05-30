@@ -6,14 +6,15 @@
 .goods-list {
     display: flex;
     justify-content: center;
+    gap: 20px;
 }
 
 .goods-item {
     border-radius: 5px;
     width: 200px;
     height: 250px;
+    padding: 50px 0 0;
     text-align: center;
-    margin: 0 10px;
     box-shadow: 0 0 5px grey;
 }
 
@@ -28,6 +29,7 @@ header {
 
 h1 {
     color: #4676d7;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 
 .cart-button {
