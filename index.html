@@ -1,23 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>eShop</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="script.js"></script>
 </head>
-
 <body>
-    <header>
-        <h1>eShop</h1>
-        <button class="cart-button" type="button">Корзина</button>
-     </header>
-     <main>
-        <div class="goods-list"></div>
-     </main>
-     <script src="script.js"></script>
+    <div id="root">
+        <header>
+            <h1 class="title">eShop</h1>
+            <div class="search">
+                <input type="text" class="goods-search" v-model="search" />
+                <button class="search-button" type="button" @click="filterItems">Поиск</button>
+            </div>
+            <div class="actions">
+                <button class="cart-button" type="button" @click="setVisibleCart">Корзина</button>
+            </div>
+        </header>
+        <main>
+            <div class="goods-list" v-if="filteredItems.length">
+                <div class="goods-item" v-for="item in filteredItems">
+                    <h3>{{ item.product_name }}</h3>
+                    <p>{{ item.price }}</p>
+                </div>
+            </div>
+            <div class="noData" v-else>Нет данных</div>
+        </main>
+        <div class="fixedArea" v-if="isVisibleCart">
+            <div class="basketCard">
+                <div class="basketCardHeader">
+                    <h1 class="basketCardHeaderTitle">Корзина</h1>
+                    <div class="basketCardHeaderCloseIcon" @click="setVisibleCart"></div>
+                </div>
+                <div class="basketCardContent">
+                    Содержимое
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
-
 </html>
