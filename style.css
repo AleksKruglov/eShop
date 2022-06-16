@@ -64,7 +64,7 @@ h1 {
 }
 
 .goods-search {
-    height: 37px;
+    height: 35px;
 }
 
 .search {
@@ -116,4 +116,5 @@ h1 {
     text-align: center;
     color: gray;
     font-size: 30px;
+    padding-top: 50px;
 }

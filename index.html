@@ -14,8 +14,9 @@
         <header>
             <h1 class="title">eShop</h1>
             <div class="search">
-                <input type="text" class="goods-search" v-model="search" />
-                <button class="search-button" type="button" @click="filterItems">Поиск</button>
+                <search-field v-model="search"></search-field>
+                <!-- <input type="text" class="goods-search" v-model="search"/>
+                <button class="search-button" type="button" @click="filterItems">Поиск</button> -->
             </div>
             <div class="actions">
                 <button class="cart-button" type="button" @click="setVisibleCart">Корзина</button>
